@@ -1,0 +1,219 @@
+/* --- Global Variables --- */
+:root {
+    --primary-color: rgb(255, 1, 115);
+    --primary-hover: rgb(220, 0, 98);
+    --secondary-bg: #f899c4;
+    --light-bg: #f8f9fa;
+    --text-dark: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    padding-top: 56px; /* Memberi ruang untuk fixed navbar */
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* --- Jumbotron / Hero --- */
+.jumbotron {
+    background-color: var(--secondary-bg);
+    padding: 80px 0 60px 0;
+}
+
+.profile-img {
+    object-fit: cover;
+    border: 4px solid #ffffff;
+}
+
+.text-muted-custom {
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+/* --- Sections --- */
+.section-title {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.text-pink {
+    color: var(--primary-color);
+}
+
+/* --- Progress Bars --- */
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar-custom {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* --- Cards --- */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.project-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* --- Footer --- */
+/* .footer {
+    background-color: var(--primary-color);
+} */
+
+/* --- Footer Modern --- */
+.footer-modern {
+    background: linear-gradient(135deg, rgb(255, 1, 115) 0%, rgb(180, 0, 80) 100%);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ffffff;
+    color: rgb(255, 1, 115);
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-top {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-top:hover {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+/* --- Styling Kartu Proyek --- */
+.project-card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(255, 1, 115, 0.15) !important;
+}
+
+/* Pembungkus Gambar & Overlay Hover */
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.card-img-overlay-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 1, 115, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-img-overlay-custom {
+    opacity: 1;
+}
+
+/* Custom Soft Badges */
+.bg-pink-soft {
+    background-color: rgba(255, 1, 115, 0.1);
+}
+
+.text-pink {
+    color: rgb(255, 1, 115) !important;
+}
+
+/* Animasi Panah Link */
+.project-link i {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.project-link:hover i {
+    transform: translateX(4px);
+}
